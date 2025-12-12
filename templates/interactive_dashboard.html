@@ -77,6 +77,37 @@
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 20px;
+            position: relative;
+        }
+        .chart-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            margin: 0;
+            border-radius: 0;
+            background: rgba(0,0,0,0.95);
+        }
+        .chart-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 5px;
+        }
+        .chart-btn {
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .chart-btn:hover {
+            background: rgba(255,255,255,0.3);
         }
         .loading { text-align: center; padding: 50px; font-size: 18px; }
     </style>
@@ -142,11 +173,15 @@
 
         </div>
         
-        <div class="chart-container">
+        <div class="chart-container" id="chartContainer">
+            <div class="chart-controls">
+                <button class="chart-btn" onclick="toggleFullscreen()" id="fullscreenBtn">🔍 Maximize</button>
+                <button class="chart-btn" onclick="minimizeChart()" id="minimizeBtn" style="display: none;">➖ Minimize</button>
+            </div>
             <div id="chart" style="height: 600px;"></div>
         </div>
         
-        <div class="chart-container">
+        <div class="chart-container" id="volumeContainer">
             <div id="volumeChart" style="height: 200px;"></div>
         </div>
     </div>
@@ -157,7 +192,7 @@
         let currentDataType = 'stocks';
         let isPlaying = false;
         let replayInterval = null;
-        let replayIndex = 10;
+        let replayIndex = 5;
         let replayDirection = 1; // 1 for forward, -1 for reverse
         let replaySpeed = 200;
 
@@ -251,8 +286,8 @@
             replayIndex += replayDirection;
             
             // Boundary checks
-            if (replayIndex < 10) {
-                replayIndex = 10;
+            if (replayIndex < 5) {
+                replayIndex = 5;
                 if (replayDirection === -1) pauseReplay();
             }
             if (replayIndex > currentData.dates.length) {
@@ -276,6 +311,49 @@
             if (currentDataType === 'stocks') {
                 renderVolumeChart(replayData);
             }
+        }
+        
+        function toggleFullscreen() {
+            const container = document.getElementById('chartContainer');
+            const chart = document.getElementById('chart');
+            const volumeContainer = document.getElementById('volumeContainer');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            const minimizeBtn = document.getElementById('minimizeBtn');
+            
+            if (container.classList.contains('fullscreen')) {
+                // Exit fullscreen
+                container.classList.remove('fullscreen');
+                chart.style.height = '600px';
+                volumeContainer.style.display = 'block';
+                fullscreenBtn.style.display = 'block';
+                minimizeBtn.style.display = 'none';
+                fullscreenBtn.textContent = '🔍 Maximize';
+            } else {
+                // Enter fullscreen
+                container.classList.add('fullscreen');
+                chart.style.height = 'calc(100vh - 40px)';
+                volumeContainer.style.display = 'none';
+                fullscreenBtn.style.display = 'none';
+                minimizeBtn.style.display = 'block';
+            }
+            
+            // Resize chart
+            setTimeout(() => {
+                if (currentData) {
+                    if (isPlaying) {
+                        replayStep();
+                    } else {
+                        renderChart(currentData, document.getElementById('chartType').value, currentDataType);
+                        if (currentDataType === 'stocks') {
+                            renderVolumeChart(currentData);
+                        }
+                    }
+                }
+            }, 100);
+        }
+        
+        function minimizeChart() {
+            toggleFullscreen();
         }
         
         function switchTab(dataType) {
