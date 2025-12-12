@@ -117,6 +117,32 @@
         }
         .stat-value { font-size: 1.8rem; font-weight: bold; margin-bottom: 5px; }
         .stat-label { font-size: 0.9rem; opacity: 0.8; }
+        .tabs {
+            display: flex;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .tab.active {
+            background: rgba(255,255,255,0.3);
+            color: #333;
+        }
+        .tab:hover {
+            background: rgba(255,255,255,0.2);
+        }
     </style>
 </head>
 <body>
@@ -127,6 +153,13 @@
             <a href="/" class="nav-btn">🏠 Back to Main</a>
             <a href="/dashboard" class="nav-btn">📈 Dashboard</a>
             <button onclick="toggleTheme()" class="nav-btn">🌙 Dark Mode</button>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('all')">📊 All Markets</button>
+            <button class="tab" onclick="switchTab('stocks')">📈 Stocks</button>
+            <button class="tab" onclick="switchTab('forex')">💱 Forex</button>
+            <button class="tab" onclick="switchTab('commodities')">🛢️ Commodities</button>
         </div>
         
         <div class="chart-container">
@@ -175,6 +208,7 @@
 
     <script>
         let backtestData = null;
+        let currentMarket = 'all';
 
         window.onload = function() {
             loadBacktestResults();
@@ -210,6 +244,11 @@
             let totalStartingCapital = 0;
 
             for (const [dataType, symbols] of Object.entries(backtestData)) {
+                // Filter by current market if not 'all'
+                if (currentMarket !== 'all' && dataType !== currentMarket) {
+                    continue;
+                }
+                
                 for (const [symbol, result] of Object.entries(symbols)) {
                     const summary = result.summary;
                     totalTrades += summary.num_trades;
@@ -263,6 +302,11 @@
             let html = '';
             
             for (const [dataType, symbols] of Object.entries(backtestData)) {
+                // Filter by current market if not 'all'
+                if (currentMarket !== 'all' && dataType !== currentMarket) {
+                    continue;
+                }
+                
                 for (const [symbol, result] of Object.entries(symbols)) {
                     const summary = result.summary;
                     const rClass = summary.avg_outcome_R >= 0 ? 'positive' : 'negative';
@@ -295,7 +339,7 @@
                 }
             }
             
-            document.getElementById('resultsGrid').innerHTML = html;
+            document.getElementById('resultsGrid').innerHTML = html || '<div class="loading">No results for this market</div>';
         }
 
         function renderPerformanceChart() {
@@ -304,6 +348,11 @@
             const colors = [];
             
             for (const [dataType, symbolData] of Object.entries(backtestData)) {
+                // Filter by current market if not 'all'
+                if (currentMarket !== 'all' && dataType !== currentMarket) {
+                    continue;
+                }
+                
                 for (const [symbol, result] of Object.entries(symbolData)) {
                     symbols.push(`${symbol.replace('_', '/')} (${dataType.toUpperCase()})`);
                     returns.push(result.summary.avg_outcome_R);
@@ -336,6 +385,11 @@
             const winRates = [];
             
             for (const [dataType, symbolData] of Object.entries(backtestData)) {
+                // Filter by current market if not 'all'
+                if (currentMarket !== 'all' && dataType !== currentMarket) {
+                    continue;
+                }
+                
                 for (const [symbol, result] of Object.entries(symbolData)) {
                     symbols.push(`${symbol.replace('_', '/')} (${dataType.toUpperCase()})`);
                     winRates.push(result.summary.win_rate_pos_R * 100);
@@ -483,6 +537,21 @@
             document.getElementById('detailModal').style.display = 'none';
         }
 
+        function switchTab(market) {
+            // Update active tab
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update current market
+            currentMarket = market;
+            
+            // Re-render all components with filtered data
+            renderSummaryStats();
+            renderResultsGrid();
+            renderPerformanceChart();
+            renderWinRateChart();
+        }
+        
         // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('detailModal');
