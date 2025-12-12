@@ -17,15 +17,22 @@
 - Export functionality and data management
 - Comprehensive test suite
 
+## Phase Three ✅
+**Location**: `backups/phase-three/`
+**Features**: Current stable state
+
 ## Current Phase 🚧
 **Status**: Active Development
-**Based on**: Phase Two
+**Based on**: Phase Three
 **Next Steps**: Ready for new features or modifications
 
 ---
 
 ### How to Revert:
 ```bash
+# To revert to Phase Three:
+cp -r backups/phase-three/* .
+
 # To revert to Phase Two:
 cp -r backups/phase-two/* .
 
