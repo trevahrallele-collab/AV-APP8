@@ -104,8 +104,15 @@
         </div>
         
         <div class="chart-container">
-            <h2>📋 Trade Details</h2>
-            <div id="tradesTable">
+            <h2>📈 Strategy Analysis</h2>
+            <div id="strategyAnalysis">
+                <div class="loading">Analyzing strategy performance...</div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h2 onclick="toggleTradeDetails()" style="cursor: pointer; user-select: none;">📋 Trade Details & Market Conditions <span id="toggleIcon">▼</span></h2>
+            <div id="tradesTable" style="display: block;">
                 <div class="loading">Loading trade details...</div>
             </div>
         </div>
@@ -137,6 +144,7 @@
                 renderMetrics();
                 renderEquityChart();
                 renderPriceChart();
+                renderStrategyAnalysis();
                 renderTradesTable();
                 
             } catch (error) {
@@ -270,6 +278,7 @@
                             <th>R Size</th>
                             <th>Outcome (R)</th>
                             <th>P&L ($)</th>
+                            <th>Market Note</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -278,6 +287,20 @@
             trades.forEach((trade, index) => {
                 const pnl = trade.outcome_R * riskPerTrade;
                 const outcomeClass = trade.outcome_R >= 0 ? 'positive' : 'negative';
+                
+                // Generate market condition note
+                let marketNote = '';
+                if (trade.outcome_R >= 1.5) {
+                    marketNote = '🟢 Strong trend continuation';
+                } else if (trade.outcome_R >= 0.5) {
+                    marketNote = '🟡 Good market conditions';
+                } else if (trade.outcome_R >= 0) {
+                    marketNote = '🟠 Weak follow-through';
+                } else if (trade.outcome_R >= -0.5) {
+                    marketNote = '🟠 Minor reversal';
+                } else {
+                    marketNote = '🔴 Strong counter-trend';
+                }
                 
                 html += `
                     <tr>
@@ -289,6 +312,7 @@
                         <td>${trade.R.toFixed(5)}</td>
                         <td class="${outcomeClass}">${trade.outcome_R.toFixed(2)}R</td>
                         <td class="${outcomeClass}">$${pnl.toFixed(2)}</td>
+                        <td>${marketNote}</td>
                     </tr>
                 `;
             });
@@ -297,10 +321,115 @@
             document.getElementById('tradesTable').innerHTML = html;
         }
         
+        function renderStrategyAnalysis() {
+            const summary = detailData.backtest.summary;
+            const trades = detailData.backtest.trades;
+            const priceData = detailData.price_data;
+            const metrics = detailData.investment_metrics;
+            
+            // Calculate data range
+            const startDate = new Date(priceData.dates[0]).toLocaleDateString();
+            const endDate = new Date(priceData.dates[priceData.dates.length - 1]).toLocaleDateString();
+            const totalDays = Math.ceil((new Date(priceData.dates[priceData.dates.length - 1]) - new Date(priceData.dates[0])) / (1000 * 60 * 60 * 24));
+            
+            // Analyze losing trades
+            const losingTrades = trades.filter(t => t.outcome_R < 0);
+            const winningTrades = trades.filter(t => t.outcome_R > 0);
+            
+            // Strategy evaluation
+            let strategyRating = 'Poor';
+            let strategyColor = '#f44336';
+            let strategyIcon = '❌';
+            
+            if (summary.win_rate_pos_R >= 0.7 && summary.avg_outcome_R > 0.5) {
+                strategyRating = 'Excellent';
+                strategyColor = '#4caf50';
+                strategyIcon = '🏆';
+            } else if (summary.win_rate_pos_R >= 0.6 && summary.avg_outcome_R > 0.2) {
+                strategyRating = 'Good';
+                strategyColor = '#8bc34a';
+                strategyIcon = '✅';
+            } else if (summary.win_rate_pos_R >= 0.5 && summary.avg_outcome_R > 0) {
+                strategyRating = 'Average';
+                strategyColor = '#ff9800';
+                strategyIcon = '⚠️';
+            }
+            
+            // Market condition analysis
+            const priceStart = priceData.prices.close[0];
+            const priceEnd = priceData.prices.close[priceData.prices.close.length - 1];
+            const marketTrend = priceEnd > priceStart ? 'Bullish' : 'Bearish';
+            const trendPercent = ((priceEnd - priceStart) / priceStart * 100).toFixed(1);
+            
+            document.getElementById('strategyAnalysis').innerHTML = `
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3>📊 Data Range</h3>
+                        <p><strong>Period:</strong> ${startDate} to ${endDate}</p>
+                        <p><strong>Duration:</strong> ${totalDays} days (${(totalDays/365).toFixed(1)} years)</p>
+                        <p><strong>Total Candles:</strong> ${priceData.dates.length}</p>
+                        <p><strong>Market Trend:</strong> ${marketTrend} (${trendPercent > 0 ? '+' : ''}${trendPercent}%)</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3>${strategyIcon} Strategy Evaluation</h3>
+                        <p><strong>Rating:</strong> <span style="color: ${strategyColor}; font-weight: bold;">${strategyRating}</span></p>
+                        <p><strong>Win Rate:</strong> ${(summary.win_rate_pos_R * 100).toFixed(1)}%</p>
+                        <p><strong>Average Return:</strong> ${summary.avg_outcome_R.toFixed(2)}R</p>
+                        <p><strong>ROI:</strong> ${metrics.roi_percent.toFixed(1)}%</p>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                        <h3>📈 Trade Breakdown</h3>
+                        <p><strong>Winning Trades:</strong> ${winningTrades.length} (${(winningTrades.length/trades.length*100).toFixed(1)}%)</p>
+                        <p><strong>Losing Trades:</strong> ${losingTrades.length} (${(losingTrades.length/trades.length*100).toFixed(1)}%)</p>
+                        <p><strong>Best Trade:</strong> ${Math.max(...trades.map(t => t.outcome_R)).toFixed(2)}R</p>
+                        <p><strong>Worst Trade:</strong> ${Math.min(...trades.map(t => t.outcome_R)).toFixed(2)}R</p>
+                    </div>
+                    
+                </div>
+                
+                <div style="margin-top: 20px; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                    <h3>🔍 Market Conditions Analysis</h3>
+                    <p><strong>Overall Market:</strong> The ${marketTrend.toLowerCase()} market trend (${trendPercent > 0 ? '+' : ''}${trendPercent}%) ${marketTrend === 'Bullish' ? 'favored long positions' : 'favored short positions'}.</p>
+                    
+                    ${losingTrades.length > 0 ? `
+                    <p><strong>Losing Trades Analysis:</strong> ${losingTrades.length} trades resulted in losses. Common factors:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>• ${losingTrades.filter(t => t.type === 'Bullish').length} bullish trades failed (${(losingTrades.filter(t => t.type === 'Bullish').length/losingTrades.length*100).toFixed(0)}% of losses)</li>
+                        <li>• ${losingTrades.filter(t => t.type === 'Bearish').length} bearish trades failed (${(losingTrades.filter(t => t.type === 'Bearish').length/losingTrades.length*100).toFixed(0)}% of losses)</li>
+                        <li>• Average loss per failed trade: ${(losingTrades.reduce((sum, t) => sum + t.outcome_R, 0) / losingTrades.length).toFixed(2)}R</li>
+                    </ul>
+                    ` : '<p><strong>Perfect Record:</strong> No losing trades in this period! 🎉</p>'}
+                    
+                    <p style="margin-top: 15px;"><strong>Strategy Recommendation:</strong> 
+                    ${strategyRating === 'Excellent' ? 'This strategy shows excellent performance. Consider increasing position size.' :
+                      strategyRating === 'Good' ? 'Solid strategy with good returns. Monitor for consistency.' :
+                      strategyRating === 'Average' ? 'Strategy needs optimization. Consider refining entry/exit rules.' :
+                      'Strategy underperforming. Significant improvements needed or consider alternative approaches.'}
+                    </p>
+                </div>
+            `;
+        }
+        
         function toggleTheme() {
             document.body.classList.toggle('dark');
             const btn = document.querySelector('button[onclick="toggleTheme()"]');
             btn.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+        }
+        
+        function toggleTradeDetails() {
+            const table = document.getElementById('tradesTable');
+            const icon = document.getElementById('toggleIcon');
+            
+            if (table.style.display === 'none') {
+                table.style.display = 'block';
+                icon.textContent = '▼';
+            } else {
+                table.style.display = 'none';
+                icon.textContent = '▶';
+            }
         }
     </script>
 </body>
