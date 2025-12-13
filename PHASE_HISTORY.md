@@ -24,15 +24,22 @@
 **Location**: `backups/twelve-phase/`
 **Features**: Current stable state
 
+## Thirteen Phase ✅
+**Location**: `backups/thirteen-phase/`
+**Features**: Current stable state
+
 ## Current Phase 🚧
 **Status**: Active Development
-**Based on**: Twelve Phase
+**Based on**: Thirteen Phase
 **Next Steps**: Ready for new features or modifications
 
 ---
 
 ### How to Revert:
 ```bash
+# To revert to Thirteen Phase:
+cp -r backups/thirteen-phase/* .
+
 # To revert to Twelve Phase:
 cp -r backups/twelve-phase/* .
 
