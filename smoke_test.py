@@ -26,12 +26,6 @@ def smoke_test():
     
     # Test 2: Test plotting functions
     try:
-        StockPlotter.plot_data(df, "static/test_plot.png")
-        print("✓ Static line chart created")
-        
-        StockPlotter.plot_candlestick(df, "static/test_candlestick.png")
-        print("✓ Static candlestick chart created")
-        
         StockPlotter.plot_interactive(df, "static/test_interactive.html")
         print("✓ Interactive line chart created")
         

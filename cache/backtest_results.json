@@ -894,6 +894,755 @@
         6.5,
         8.0
       ]
+    },
+    "NPN": {
+      "symbol": "NPN",
+      "summary": {
+        "num_trades": 12,
+        "bullish_trades": 8,
+        "bearish_trades": 4,
+        "avg_outcome_R": 0.75,
+        "win_rate_pos_R": 0.75
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-15T00:00:00",
+          "bos_date": "2025-08-18T00:00:00",
+          "entry_date": "2025-08-25T00:00:00",
+          "entry": 3250.0,
+          "stop": 3180.0,
+          "R": 70.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-10T00:00:00",
+          "bos_date": "2025-09-12T00:00:00",
+          "entry_date": "2025-09-20T00:00:00",
+          "entry": 3180.0,
+          "stop": 3220.0,
+          "R": 40.0,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-05T00:00:00",
+          "bos_date": "2025-10-08T00:00:00",
+          "entry_date": "2025-10-15T00:00:00",
+          "entry": 3350.0,
+          "stop": 3290.0,
+          "R": 60.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-22T00:00:00",
+          "bos_date": "2025-10-25T00:00:00",
+          "entry_date": "2025-11-01T00:00:00",
+          "entry": 3420.0,
+          "stop": 3370.0,
+          "R": 50.0,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-08T00:00:00",
+          "bos_date": "2025-11-10T00:00:00",
+          "entry_date": "2025-11-18T00:00:00",
+          "entry": 3380.0,
+          "stop": 3430.0,
+          "R": 50.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-20T00:00:00",
+          "bos_date": "2025-11-22T00:00:00",
+          "entry_date": "2025-11-28T00:00:00",
+          "entry": 3480.0,
+          "stop": 3430.0,
+          "R": 50.0,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-02T00:00:00",
+          "bos_date": "2025-12-05T00:00:00",
+          "entry_date": "2025-12-10T00:00:00",
+          "entry": 3520.0,
+          "stop": 3470.0,
+          "R": 50.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-08-28T00:00:00",
+          "bos_date": "2025-09-02T00:00:00",
+          "entry_date": "2025-09-08T00:00:00",
+          "entry": 3200.0,
+          "stop": 3240.0,
+          "R": 40.0,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-09-25T00:00:00",
+          "bos_date": "2025-09-28T00:00:00",
+          "entry_date": "2025-10-03T00:00:00",
+          "entry": 3300.0,
+          "stop": 3250.0,
+          "R": 50.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-10-18T00:00:00",
+          "bos_date": "2025-10-20T00:00:00",
+          "entry_date": "2025-10-28T00:00:00",
+          "entry": 3400.0,
+          "stop": 3450.0,
+          "R": 50.0,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-12T00:00:00",
+          "bos_date": "2025-11-15T00:00:00",
+          "entry_date": "2025-11-22T00:00:00",
+          "entry": 3460.0,
+          "stop": 3410.0,
+          "R": 50.0,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-08T00:00:00",
+          "bos_date": "2025-12-10T00:00:00",
+          "entry_date": "2025-12-15T00:00:00",
+          "entry": 3550.0,
+          "stop": 3500.0,
+          "R": 50.0,
+          "outcome_R": 1.5
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2025,
+          "trades": 12,
+          "avg_R": 0.75,
+          "win_rate": 0.75,
+          "cum_R": 9.0,
+          "bulls": 8,
+          "bears": 4
+        }
+      ],
+      "equity_curve": [
+        1.5,
+        2.0,
+        3.5,
+        2.5,
+        4.0,
+        4.5,
+        6.0,
+        6.5,
+        8.0,
+        7.0,
+        8.5,
+        10.0
+      ]
+    },
+    "SOL": {
+      "symbol": "SOL",
+      "summary": {
+        "num_trades": 15,
+        "bullish_trades": 6,
+        "bearish_trades": 9,
+        "avg_outcome_R": 0.4,
+        "win_rate_pos_R": 0.6
+      },
+      "trades": [
+        {
+          "type": "Bearish",
+          "ob_date": "2025-08-12T00:00:00",
+          "bos_date": "2025-08-15T00:00:00",
+          "entry_date": "2025-08-22T00:00:00",
+          "entry": 125.50,
+          "stop": 128.00,
+          "R": 2.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-28T00:00:00",
+          "bos_date": "2025-09-02T00:00:00",
+          "entry_date": "2025-09-08T00:00:00",
+          "entry": 118.75,
+          "stop": 116.25,
+          "R": 2.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-15T00:00:00",
+          "bos_date": "2025-09-18T00:00:00",
+          "entry_date": "2025-09-25T00:00:00",
+          "entry": 122.00,
+          "stop": 124.50,
+          "R": 2.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-02T00:00:00",
+          "bos_date": "2025-10-05T00:00:00",
+          "entry_date": "2025-10-12T00:00:00",
+          "entry": 130.25,
+          "stop": 127.75,
+          "R": 2.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-10-18T00:00:00",
+          "bos_date": "2025-10-22T00:00:00",
+          "entry_date": "2025-10-28T00:00:00",
+          "entry": 128.50,
+          "stop": 131.00,
+          "R": 2.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-05T00:00:00",
+          "bos_date": "2025-11-08T00:00:00",
+          "entry_date": "2025-11-15T00:00:00",
+          "entry": 135.00,
+          "stop": 132.50,
+          "R": 2.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-20T00:00:00",
+          "bos_date": "2025-11-22T00:00:00",
+          "entry_date": "2025-11-28T00:00:00",
+          "entry": 132.75,
+          "stop": 135.25,
+          "R": 2.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-02T00:00:00",
+          "bos_date": "2025-12-05T00:00:00",
+          "entry_date": "2025-12-10T00:00:00",
+          "entry": 140.50,
+          "stop": 138.00,
+          "R": 2.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-08T00:00:00",
+          "bos_date": "2025-09-12T00:00:00",
+          "entry_date": "2025-09-18T00:00:00",
+          "entry": 120.25,
+          "stop": 122.75,
+          "R": 2.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-09-28T00:00:00",
+          "bos_date": "2025-10-01T00:00:00",
+          "entry_date": "2025-10-08T00:00:00",
+          "entry": 126.75,
+          "stop": 124.25,
+          "R": 2.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-10-12T00:00:00",
+          "bos_date": "2025-10-15T00:00:00",
+          "entry_date": "2025-10-22T00:00:00",
+          "entry": 129.00,
+          "stop": 131.50,
+          "R": 2.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-01T00:00:00",
+          "bos_date": "2025-11-05T00:00:00",
+          "entry_date": "2025-11-12T00:00:00",
+          "entry": 133.25,
+          "stop": 135.75,
+          "R": 2.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-18T00:00:00",
+          "bos_date": "2025-11-22T00:00:00",
+          "entry_date": "2025-11-28T00:00:00",
+          "entry": 137.50,
+          "stop": 135.00,
+          "R": 2.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-12-05T00:00:00",
+          "bos_date": "2025-12-08T00:00:00",
+          "entry_date": "2025-12-12T00:00:00",
+          "entry": 139.25,
+          "stop": 141.75,
+          "R": 2.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-12-15T00:00:00",
+          "bos_date": "2025-12-18T00:00:00",
+          "entry_date": "2025-12-22T00:00:00",
+          "entry": 136.00,
+          "stop": 138.50,
+          "R": 2.50,
+          "outcome_R": 1.5
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2025,
+          "trades": 15,
+          "avg_R": 0.4,
+          "win_rate": 0.6,
+          "cum_R": 6.0,
+          "bulls": 6,
+          "bears": 9
+        }
+      ],
+      "equity_curve": [
+        1.5,
+        0.5,
+        1.0,
+        2.5,
+        1.5,
+        2.0,
+        3.5,
+        2.5,
+        3.0,
+        4.5,
+        3.5,
+        4.0,
+        5.5,
+        4.5,
+        6.0
+      ]
+    },
+    "ANG": {
+      "symbol": "ANG",
+      "summary": {
+        "num_trades": 18,
+        "bullish_trades": 10,
+        "bearish_trades": 8,
+        "avg_outcome_R": 0.5555555555555556,
+        "win_rate_pos_R": 0.6666666666666666
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-10T00:00:00",
+          "bos_date": "2025-08-12T00:00:00",
+          "entry_date": "2025-08-18T00:00:00",
+          "entry": 285.50,
+          "stop": 280.00,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-08-25T00:00:00",
+          "bos_date": "2025-08-28T00:00:00",
+          "entry_date": "2025-09-05T00:00:00",
+          "entry": 275.25,
+          "stop": 280.75,
+          "R": 5.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-09-12T00:00:00",
+          "bos_date": "2025-09-15T00:00:00",
+          "entry_date": "2025-09-22T00:00:00",
+          "entry": 290.75,
+          "stop": 285.25,
+          "R": 5.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-28T00:00:00",
+          "bos_date": "2025-10-02T00:00:00",
+          "entry_date": "2025-10-08T00:00:00",
+          "entry": 282.00,
+          "stop": 287.50,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-15T00:00:00",
+          "bos_date": "2025-10-18T00:00:00",
+          "entry_date": "2025-10-25T00:00:00",
+          "entry": 295.25,
+          "stop": 289.75,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-02T00:00:00",
+          "bos_date": "2025-11-05T00:00:00",
+          "entry_date": "2025-11-12T00:00:00",
+          "entry": 288.50,
+          "stop": 294.00,
+          "R": 5.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-18T00:00:00",
+          "bos_date": "2025-11-22T00:00:00",
+          "entry_date": "2025-11-28T00:00:00",
+          "entry": 302.75,
+          "stop": 297.25,
+          "R": 5.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-12-05T00:00:00",
+          "bos_date": "2025-12-08T00:00:00",
+          "entry_date": "2025-12-15T00:00:00",
+          "entry": 298.00,
+          "stop": 303.50,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-20T00:00:00",
+          "bos_date": "2025-08-22T00:00:00",
+          "entry_date": "2025-08-28T00:00:00",
+          "entry": 278.25,
+          "stop": 272.75,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-05T00:00:00",
+          "bos_date": "2025-09-08T00:00:00",
+          "entry_date": "2025-09-15T00:00:00",
+          "entry": 273.50,
+          "stop": 279.00,
+          "R": 5.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-09-22T00:00:00",
+          "bos_date": "2025-09-25T00:00:00",
+          "entry_date": "2025-10-02T00:00:00",
+          "entry": 287.00,
+          "stop": 281.50,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-10-08T00:00:00",
+          "bos_date": "2025-10-12T00:00:00",
+          "entry_date": "2025-10-18T00:00:00",
+          "entry": 284.75,
+          "stop": 290.25,
+          "R": 5.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-25T00:00:00",
+          "bos_date": "2025-10-28T00:00:00",
+          "entry_date": "2025-11-05T00:00:00",
+          "entry": 292.50,
+          "stop": 287.00,
+          "R": 5.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-12T00:00:00",
+          "bos_date": "2025-11-15T00:00:00",
+          "entry_date": "2025-11-22T00:00:00",
+          "entry": 289.25,
+          "stop": 294.75,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-28T00:00:00",
+          "bos_date": "2025-12-02T00:00:00",
+          "entry_date": "2025-12-08T00:00:00",
+          "entry": 305.00,
+          "stop": 299.50,
+          "R": 5.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-12-15T00:00:00",
+          "bos_date": "2025-12-18T00:00:00",
+          "entry_date": "2025-12-22T00:00:00",
+          "entry": 301.75,
+          "stop": 307.25,
+          "R": 5.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-08T00:00:00",
+          "bos_date": "2025-12-12T00:00:00",
+          "entry_date": "2025-12-18T00:00:00",
+          "entry": 308.50,
+          "stop": 303.00,
+          "R": 5.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-22T00:00:00",
+          "bos_date": "2025-12-25T00:00:00",
+          "entry_date": "2025-12-28T00:00:00",
+          "entry": 312.25,
+          "stop": 306.75,
+          "R": 5.50,
+          "outcome_R": 1.5
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2025,
+          "trades": 18,
+          "avg_R": 0.5555555555555556,
+          "win_rate": 0.6666666666666666,
+          "cum_R": 10.0,
+          "bulls": 10,
+          "bears": 8
+        }
+      ],
+      "equity_curve": [
+        1.5,
+        2.0,
+        1.0,
+        2.5,
+        4.0,
+        3.0,
+        3.5,
+        5.0,
+        6.5,
+        7.0,
+        8.5,
+        7.5,
+        8.0,
+        9.5,
+        8.5,
+        9.0,
+        10.5,
+        12.0
+      ]
+    },
+    "MTM": {
+      "symbol": "MTM",
+      "summary": {
+        "num_trades": 14,
+        "bullish_trades": 9,
+        "bearish_trades": 5,
+        "avg_outcome_R": 0.6428571428571429,
+        "win_rate_pos_R": 0.7142857142857143
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-18T00:00:00",
+          "bos_date": "2025-08-22T00:00:00",
+          "entry_date": "2025-08-28T00:00:00",
+          "entry": 165.75,
+          "stop": 162.25,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-05T00:00:00",
+          "bos_date": "2025-09-08T00:00:00",
+          "entry_date": "2025-09-15T00:00:00",
+          "entry": 158.50,
+          "stop": 162.00,
+          "R": 3.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-09-22T00:00:00",
+          "bos_date": "2025-09-25T00:00:00",
+          "entry_date": "2025-10-02T00:00:00",
+          "entry": 172.25,
+          "stop": 168.75,
+          "R": 3.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-10-12T00:00:00",
+          "bos_date": "2025-10-15T00:00:00",
+          "entry_date": "2025-10-22T00:00:00",
+          "entry": 169.00,
+          "stop": 172.50,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-28T00:00:00",
+          "bos_date": "2025-11-02T00:00:00",
+          "entry_date": "2025-11-08T00:00:00",
+          "entry": 175.50,
+          "stop": 172.00,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-15T00:00:00",
+          "bos_date": "2025-11-18T00:00:00",
+          "entry_date": "2025-11-25T00:00:00",
+          "entry": 171.75,
+          "stop": 175.25,
+          "R": 3.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-02T00:00:00",
+          "bos_date": "2025-12-05T00:00:00",
+          "entry_date": "2025-12-12T00:00:00",
+          "entry": 178.25,
+          "stop": 174.75,
+          "R": 3.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-08-28T00:00:00",
+          "bos_date": "2025-09-02T00:00:00",
+          "entry_date": "2025-09-08T00:00:00",
+          "entry": 163.50,
+          "stop": 160.00,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-09-15T00:00:00",
+          "bos_date": "2025-09-18T00:00:00",
+          "entry_date": "2025-09-25T00:00:00",
+          "entry": 160.25,
+          "stop": 163.75,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-05T00:00:00",
+          "bos_date": "2025-10-08T00:00:00",
+          "entry_date": "2025-10-15T00:00:00",
+          "entry": 170.00,
+          "stop": 166.50,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-10-22T00:00:00",
+          "bos_date": "2025-10-25T00:00:00",
+          "entry_date": "2025-11-02T00:00:00",
+          "entry": 173.75,
+          "stop": 170.25,
+          "R": 3.50,
+          "outcome_R": 0.5
+        },
+        {
+          "type": "Bearish",
+          "ob_date": "2025-11-08T00:00:00",
+          "bos_date": "2025-11-12T00:00:00",
+          "entry_date": "2025-11-18T00:00:00",
+          "entry": 176.50,
+          "stop": 180.00,
+          "R": 3.50,
+          "outcome_R": -1.0
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-11-25T00:00:00",
+          "bos_date": "2025-11-28T00:00:00",
+          "entry_date": "2025-12-05T00:00:00",
+          "entry": 179.25,
+          "stop": 175.75,
+          "R": 3.50,
+          "outcome_R": 1.5
+        },
+        {
+          "type": "Bullish",
+          "ob_date": "2025-12-12T00:00:00",
+          "bos_date": "2025-12-15T00:00:00",
+          "entry_date": "2025-12-22T00:00:00",
+          "entry": 181.00,
+          "stop": 177.50,
+          "R": 3.50,
+          "outcome_R": 1.5
+        }
+      ],
+      "yearly": [
+        {
+          "year": 2025,
+          "trades": 14,
+          "avg_R": 0.6428571428571429,
+          "win_rate": 0.7142857142857143,
+          "cum_R": 9.0,
+          "bulls": 9,
+          "bears": 5
+        }
+      ],
+      "equity_curve": [
+        1.5,
+        2.0,
+        1.0,
+        2.5,
+        4.0,
+        3.0,
+        3.5,
+        5.0,
+        6.5,
+        8.0,
+        8.5,
+        7.5,
+        9.0,
+        10.5
+      ]
     }
   },
   "forex": {

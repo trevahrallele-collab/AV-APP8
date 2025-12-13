@@ -121,18 +121,22 @@ def run_all_backtests(strategy_name="ob_refined_strategy"):
                 # Filter: Keep only tickers with 65%+ win rate
                 if win_rate_pct < 65.0:
                     print(f"    ❌ REMOVED (Win rate: {win_rate_pct:.1f}% < 65%)")
-                    del results[data_type][symbol]
+                    results[data_type][symbol] = None
                 else:
                     print(f"    🎯 KEPT (Win rate: {win_rate_pct:.1f}% >= 65%)")
             else:
                 print(f"    ❌ Error: {result['error']}")
-                del results[data_type][symbol]
+                results[data_type][symbol] = None
     
-    # Save filtered results
+    # Remove None entries and save filtered results
+    filtered_results = {}
+    for data_type, symbols in results.items():
+        filtered_results[data_type] = {k: v for k, v in symbols.items() if v is not None}
+    
     os.makedirs('cache', exist_ok=True)
     cache_file = f'cache/{strategy_name}_results.json'
     with open(cache_file, 'w') as f:
-        json.dump(results, f, indent=2)
+        json.dump(filtered_results, f, indent=2)
     
     print(f"\\n✅ {strategy_name} results saved to {cache_file}")
     return results
