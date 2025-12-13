@@ -115,11 +115,20 @@ def run_all_backtests(strategy_name="ob_refined_strategy"):
             
             if 'error' not in result:
                 summary = result['summary']
-                print(f"    ✅ {summary['num_trades']} trades, {summary['avg_outcome_R']:.2f}R avg, {summary['win_rate_pos_R']:.1%} win rate")
+                win_rate_pct = summary['win_rate_pos_R'] * 100
+                print(f"    ✅ {summary['num_trades']} trades, {summary['avg_outcome_R']:.2f}R avg, {win_rate_pct:.1f}% win rate")
+                
+                # Filter: Keep only tickers with 65%+ win rate
+                if win_rate_pct < 65.0:
+                    print(f"    ❌ REMOVED (Win rate: {win_rate_pct:.1f}% < 65%)")
+                    del results[data_type][symbol]
+                else:
+                    print(f"    🎯 KEPT (Win rate: {win_rate_pct:.1f}% >= 65%)")
             else:
                 print(f"    ❌ Error: {result['error']}")
+                del results[data_type][symbol]
     
-    # Save results
+    # Save filtered results
     os.makedirs('cache', exist_ok=True)
     cache_file = f'cache/{strategy_name}_results.json'
     with open(cache_file, 'w') as f:
