@@ -151,11 +151,6 @@
       "bullish": 0,
       "bearish": 10
     },
-    "TSLS": {
-      "total": 34,
-      "bullish": 4,
-      "bearish": 30
-    },
     "WTI": {
       "total": 5,
       "bullish": 0,
@@ -165,6 +160,11 @@
       "total": 5,
       "bullish": 0,
       "bearish": 5
+    },
+    "TSLS_moved": {
+      "total": 34,
+      "bullish": 4,
+      "bearish": 30
     }
   },
   "by_type": {

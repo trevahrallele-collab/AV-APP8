@@ -3202,6 +3202,56 @@
         0,
         0.9240986717267554
       ]
+    },
+    "TSLS": {
+      "symbol": "TSLS",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "avg_outcome_R": -0.3703241895261845,
+        "win_rate_pos_R": 0.0,
+        "bullish_trades": 1,
+        "bearish_trades": 0
+      },
+      "trades": [
+        {
+          "entry_date": "2025-07-24T00:00:00",
+          "exit_date": "2025-12-12T00:00:00",
+          "entry_price": 8.02,
+          "exit_price": 5.05,
+          "outcome_R": -0.3703241895261845,
+          "type": "Bullish"
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.3703241895261845
+      ]
+    },
+    "TZA": {
+      "symbol": "TZA",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "avg_outcome_R": -0.3486842105263159,
+        "win_rate_pos_R": 0.0,
+        "bullish_trades": 1,
+        "bearish_trades": 0
+      },
+      "trades": [
+        {
+          "entry_date": "2025-07-24T00:00:00",
+          "exit_date": "2025-12-12T00:00:00",
+          "entry_price": 10.64,
+          "exit_price": 6.93,
+          "outcome_R": -0.3486842105263159,
+          "type": "Bullish"
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.3486842105263159
+      ]
     }
   }
 }

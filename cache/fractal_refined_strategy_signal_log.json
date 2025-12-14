@@ -1,5 +1,5 @@
 {
-  "total_signals": 1401,
+  "total_signals": 1496,
   "by_symbol": {
     "MSFT": {
       "total": 50,
@@ -142,19 +142,14 @@
       "bearish": 6
     },
     "TZA": {
-      "total": 58,
-      "bullish": 10,
-      "bearish": 48
+      "total": 87,
+      "bullish": 15,
+      "bearish": 72
     },
     "ETHA": {
       "total": 42,
       "bullish": 14,
       "bearish": 28
-    },
-    "TSLS": {
-      "total": 44,
-      "bullish": 4,
-      "bearish": 40
     },
     "WTI": {
       "total": 15,
@@ -165,10 +160,20 @@
       "total": 15,
       "bullish": 3,
       "bearish": 12
+    },
+    "TSLS_moved": {
+      "total": 88,
+      "bullish": 8,
+      "bearish": 80
+    },
+    "TSLS": {
+      "total": 22,
+      "bullish": 2,
+      "bearish": 20
     }
   },
   "by_type": {
-    "Bullish": 781,
-    "Bearish": 620
+    "Bullish": 792,
+    "Bearish": 704
   }
 }

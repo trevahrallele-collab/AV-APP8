@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AV-APP
 
 A clean financial data visualization application using Alpha Vantage API.
@@ -31,3 +32,6 @@ Run smoke tests after any changes:
 ```bash
 bash run_tests.sh
 ```
+=======
+# AV-APP3
+>>>>>>> 8a0bb9a1cfa6f5dd9c9af7d77357095d9f19891e

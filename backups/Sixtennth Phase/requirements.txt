@@ -1,0 +1,6 @@
+requests
+pandas
+flask
+plotly
+matplotlib
+dash
