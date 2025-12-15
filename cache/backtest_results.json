@@ -3003,29 +3003,229 @@
     }
   },
   "etfs": {
+    "AGG": {
+      "symbol": "AGG",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.008357007228670575,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 257.4,
+          "exit_price": 259.55,
+          "outcome_R": 0.008357007228670575
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.008357007228670575
+      ]
+    },
+    "ARKF": {
+      "symbol": "ARKF",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.08931110246011609,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 598.48,
+          "exit_price": 651.93,
+          "outcome_R": 0.08931110246011609
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.08931110246011609
+      ]
+    },
+    "ARKG": {
+      "symbol": "ARKG",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.2111532972548688,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 214.02,
+          "exit_price": 168.83,
+          "outcome_R": -0.2111532972548688
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.2111532972548688
+      ]
+    },
+    "ARKK": {
+      "symbol": "ARKK",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.13883430685475837,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 151.0,
+          "exit_price": 130.04,
+          "outcome_R": -0.13883430685475837
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.13883430685475837
+      ]
+    },
+    "ARKQ": {
+      "symbol": "ARKQ",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.020569119052798557,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 592.04,
+          "exit_price": 579.86,
+          "outcome_R": -0.020569119052798557
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.020569119052798557
+      ]
+    },
+    "ARKW": {
+      "symbol": "ARKW",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.01800744126178897,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 32.6,
+          "exit_price": 33.19,
+          "outcome_R": 0.01800744126178897
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.01800744126178897
+      ]
+    },
+    "BND": {
+      "symbol": "BND",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.017585662187823158,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 68.59,
+          "exit_price": 69.8,
+          "outcome_R": 0.017585662187823158
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.017585662187823158
+      ]
+    },
     "ETHA": {
       "symbol": "ETHA",
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.18005637773079633,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.1254598957375705,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 28.38,
-          "exit_price": 23.27,
-          "outcome_R": -0.18005637773079633,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 283.35,
+          "exit_price": 318.9,
+          "outcome_R": 0.1254598957375705
         }
       ],
       "equity_curve": [
         0,
-        -0.18005637773079633
+        0.1254598957375705
+      ]
+    },
+    "GLD": {
+      "symbol": "GLD",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.1657571701077743,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 113.54,
+          "exit_price": 132.37,
+          "outcome_R": 0.1657571701077743
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.1657571701077743
       ]
     },
     "IBIT": {
@@ -3033,24 +3233,49 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.24327519952704693,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.5362057983058742,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 67.66,
-          "exit_price": 51.2,
-          "outcome_R": -0.24327519952704693,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 441.02,
+          "exit_price": 677.5,
+          "outcome_R": 0.5362057983058742
         }
       ],
       "equity_curve": [
         0,
-        -0.24327519952704693
+        0.5362057983058742
+      ]
+    },
+    "IWM": {
+      "symbol": "IWM",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.09565912482489766,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 73.38,
+          "exit_price": 80.4,
+          "outcome_R": 0.09565912482489766
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.09565912482489766
       ]
     },
     "QQQ": {
@@ -3058,24 +3283,49 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": 0.08603387550662822,
-        "win_rate_pos_R": 1.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.07043037894127527,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 565.01,
-          "exit_price": 613.62,
-          "outcome_R": 0.08603387550662822,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 156.38,
+          "exit_price": 167.39,
+          "outcome_R": 0.07043037894127527
         }
       ],
       "equity_curve": [
         0,
-        0.08603387550662822
+        0.07043037894127527
+      ]
+    },
+    "SLV": {
+      "symbol": "SLV",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.1711867475456402,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 382.03,
+          "exit_price": 447.43,
+          "outcome_R": 0.1711867475456402
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.1711867475456402
       ]
     },
     "SOXL": {
@@ -3083,24 +3333,24 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": 0.6280249804839968,
-        "win_rate_pos_R": 1.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.46604160185776033,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 25.62,
-          "exit_price": 41.71,
-          "outcome_R": 0.6280249804839968,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 569.73,
+          "exit_price": 835.24,
+          "outcome_R": 0.46604160185776033
         }
       ],
       "equity_curve": [
         0,
-        0.6280249804839968
+        0.46604160185776033
       ]
     },
     "SOXS": {
@@ -3108,24 +3358,74 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.5688073394495413,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.393568490163307,
+        "win_rate_pos_R": 0.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 7.63,
-          "exit_price": 3.29,
-          "outcome_R": -0.5688073394495413,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 455.23,
+          "exit_price": 276.06,
+          "outcome_R": -0.393568490163307
         }
       ],
       "equity_curve": [
         0,
-        -0.5688073394495413
+        -0.393568490163307
+      ]
+    },
+    "SPXL": {
+      "symbol": "SPXL",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.2488755256551176,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 186.7,
+          "exit_price": 233.17,
+          "outcome_R": 0.2488755256551176
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.2488755256551176
+      ]
+    },
+    "SPXS": {
+      "symbol": "SPXS",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.23486738536174348,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 458.97,
+          "exit_price": 351.17,
+          "outcome_R": -0.23486738536174348
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.23486738536174348
       ]
     },
     "SPY": {
@@ -3133,24 +3433,74 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": 0.07461933734749855,
-        "win_rate_pos_R": 1.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.07320612382040395,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 634.42,
-          "exit_price": 681.76,
-          "outcome_R": 0.07461933734749855,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 224.28,
+          "exit_price": 240.7,
+          "outcome_R": 0.07320612382040395
         }
       ],
       "equity_curve": [
         0,
-        0.07461933734749855
+        0.07320612382040395
+      ]
+    },
+    "SQQQ": {
+      "symbol": "SQQQ",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.274605440437806,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 108.99,
+          "exit_price": 79.06,
+          "outcome_R": -0.274605440437806
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.274605440437806
+      ]
+    },
+    "TLT": {
+      "symbol": "TLT",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.011783502615910825,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 483.45,
+          "exit_price": 489.15,
+          "outcome_R": 0.011783502615910825
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.011783502615910825
       ]
     },
     "TQQQ": {
@@ -3158,24 +3508,24 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.40262384076000907,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.2385453363459658,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 88.42,
-          "exit_price": 52.82,
-          "outcome_R": -0.40262384076000907,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 519.09,
+          "exit_price": 642.92,
+          "outcome_R": 0.2385453363459658
         }
       ],
       "equity_curve": [
         0,
-        -0.40262384076000907
+        0.2385453363459658
       ]
     },
     "TSLL": {
@@ -3183,24 +3533,24 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": 0.9240986717267554,
-        "win_rate_pos_R": 1.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": 1.0660531715735975,
+        "win_rate_pos_R": 1.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 10.54,
-          "exit_price": 20.28,
-          "outcome_R": 0.9240986717267554,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 282.9,
+          "exit_price": 584.5,
+          "outcome_R": 1.0660531715735975
         }
       ],
       "equity_curve": [
         0,
-        0.9240986717267554
+        1.0660531715735975
       ]
     },
     "TSLS": {
@@ -3208,24 +3558,24 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.3703241895261845,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.3137711454819978,
+        "win_rate_pos_R": 0.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 8.02,
-          "exit_price": 5.05,
-          "outcome_R": -0.3703241895261845,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 157.13,
+          "exit_price": 107.83,
+          "outcome_R": -0.3137711454819978
         }
       ],
       "equity_curve": [
         0,
-        -0.3703241895261845
+        -0.3137711454819978
       ]
     },
     "TZA": {
@@ -3233,24 +3583,324 @@
       "strategy": "buy_hold",
       "summary": {
         "num_trades": 1,
-        "avg_outcome_R": -0.3486842105263159,
-        "win_rate_pos_R": 0.0,
         "bullish_trades": 1,
-        "bearish_trades": 0
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.19841632227433625,
+        "win_rate_pos_R": 0.0
       },
       "trades": [
         {
-          "entry_date": "2025-07-24T00:00:00",
-          "exit_date": "2025-12-12T00:00:00",
-          "entry_price": 10.64,
-          "exit_price": 6.93,
-          "outcome_R": -0.3486842105263159,
-          "type": "Bullish"
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 342.66,
+          "exit_price": 274.67,
+          "outcome_R": -0.19841632227433625
         }
       ],
       "equity_curve": [
         0,
-        -0.3486842105263159
+        -0.19841632227433625
+      ]
+    },
+    "UNG": {
+      "symbol": "UNG",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": -0.15177599489728982,
+        "win_rate_pos_R": 0.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 64.77,
+          "exit_price": 54.94,
+          "outcome_R": -0.15177599489728982
+        }
+      ],
+      "equity_curve": [
+        0,
+        -0.15177599489728982
+      ]
+    },
+    "USO": {
+      "symbol": "USO",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.14780077463274227,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 98.85,
+          "exit_price": 113.46,
+          "outcome_R": 0.14780077463274227
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.14780077463274227
+      ]
+    },
+    "VEA": {
+      "symbol": "VEA",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.09550002592955759,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 289.66,
+          "exit_price": 317.32,
+          "outcome_R": 0.09550002592955759
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.09550002592955759
+      ]
+    },
+    "VOO": {
+      "symbol": "VOO",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.054840051573520315,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 531.51,
+          "exit_price": 560.66,
+          "outcome_R": 0.054840051573520315
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.054840051573520315
+      ]
+    },
+    "VTI": {
+      "symbol": "VTI",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.09922893154037273,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 565.64,
+          "exit_price": 621.76,
+          "outcome_R": 0.09922893154037273
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.09922893154037273
+      ]
+    },
+    "VWO": {
+      "symbol": "VWO",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.08639489327491384,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 473.42,
+          "exit_price": 514.32,
+          "outcome_R": 0.08639489327491384
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.08639489327491384
+      ]
+    },
+    "XLE": {
+      "symbol": "XLE",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.05585743324555294,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 313.24,
+          "exit_price": 330.73,
+          "outcome_R": 0.05585743324555294
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.05585743324555294
+      ]
+    },
+    "XLF": {
+      "symbol": "XLF",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.10931129954006236,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 486.61,
+          "exit_price": 539.8,
+          "outcome_R": 0.10931129954006236
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.10931129954006236
+      ]
+    },
+    "XLI": {
+      "symbol": "XLI",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.06084002648218388,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 365.76,
+          "exit_price": 388.02,
+          "outcome_R": 0.06084002648218388
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.06084002648218388
+      ]
+    },
+    "XLK": {
+      "symbol": "XLK",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.13103952239860006,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 241.04,
+          "exit_price": 272.62,
+          "outcome_R": 0.13103952239860006
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.13103952239860006
+      ]
+    },
+    "XLP": {
+      "symbol": "XLP",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.03487418471743466,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 291.88,
+          "exit_price": 302.06,
+          "outcome_R": 0.03487418471743466
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.03487418471743466
+      ]
+    },
+    "XLV": {
+      "symbol": "XLV",
+      "strategy": "buy_hold",
+      "summary": {
+        "num_trades": 1,
+        "bullish_trades": 1,
+        "bearish_trades": 0,
+        "avg_outcome_R": 0.05846762067037658,
+        "win_rate_pos_R": 1.0
+      },
+      "trades": [
+        {
+          "type": "Bullish",
+          "entry_date": "2025-07-24",
+          "exit_date": "2025-12-12",
+          "entry_price": 463.25,
+          "exit_price": 490.33,
+          "outcome_R": 0.05846762067037658
+        }
+      ],
+      "equity_curve": [
+        0,
+        0.05846762067037658
       ]
     }
   }

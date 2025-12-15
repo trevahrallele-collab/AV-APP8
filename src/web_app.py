@@ -23,17 +23,58 @@ def backtests():
 def trading_signals():
     return render_template('trading_signals.html')
 
+# ETF Routes (Complete list)
+@app.route('/agg')
+def agg_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='AGG')
+
+@app.route('/arkf')
+def arkf_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='ARKF')
+
+@app.route('/arkg')
+def arkg_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='ARKG')
+
+@app.route('/arkk')
+def arkk_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='ARKK')
+
+@app.route('/arkq')
+def arkq_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='ARKQ')
+
+@app.route('/arkw')
+def arkw_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='ARKW')
+
+@app.route('/bnd')
+def bnd_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='BND')
+
 @app.route('/etha')
 def etha_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='ETHA')
+
+@app.route('/gld')
+def gld_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='GLD')
 
 @app.route('/ibit')
 def ibit_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='IBIT')
 
+@app.route('/iwm')
+def iwm_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='IWM')
+
 @app.route('/qqq')
 def qqq_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='QQQ')
+
+@app.route('/slv')
+def slv_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='SLV')
 
 @app.route('/soxl')
 def soxl_backtest():
@@ -43,9 +84,25 @@ def soxl_backtest():
 def soxs_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='SOXS')
 
+@app.route('/spxl')
+def spxl_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='SPXL')
+
+@app.route('/spxs')
+def spxs_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='SPXS')
+
 @app.route('/spy')
 def spy_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='SPY')
+
+@app.route('/sqqq')
+def sqqq_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='SQQQ')
+
+@app.route('/tlt')
+def tlt_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='TLT')
 
 @app.route('/tqqq')
 def tqqq_backtest():
@@ -55,6 +112,62 @@ def tqqq_backtest():
 def tsll_backtest():
     return render_template('backtest_detail.html', data_type='etfs', symbol='TSLL')
 
+@app.route('/tsls')
+def tsls_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='TSLS')
+
+@app.route('/tza')
+def tza_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='TZA')
+
+@app.route('/ung')
+def ung_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='UNG')
+
+@app.route('/uso')
+def uso_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='USO')
+
+@app.route('/vea')
+def vea_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='VEA')
+
+@app.route('/voo')
+def voo_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='VOO')
+
+@app.route('/vti')
+def vti_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='VTI')
+
+@app.route('/vwo')
+def vwo_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='VWO')
+
+@app.route('/xle')
+def xle_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLE')
+
+@app.route('/xlf')
+def xlf_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLF')
+
+@app.route('/xli')
+def xli_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLI')
+
+@app.route('/xlk')
+def xlk_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLK')
+
+@app.route('/xlp')
+def xlp_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLP')
+
+@app.route('/xlv')
+def xlv_backtest():
+    return render_template('backtest_detail.html', data_type='etfs', symbol='XLV')
+
 @app.route('/backtest/<data_type>/<symbol>')
 def backtest_detail(data_type, symbol):
     return render_template('backtest_detail.html', data_type=data_type, symbol=symbol)
@@ -62,34 +175,53 @@ def backtest_detail(data_type, symbol):
 @app.route('/api/backtest-detail/<data_type>/<symbol>')
 def api_backtest_detail(data_type, symbol):
     try:
-        with open('../cache/backtest_results.json', 'r') as f:
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        
+        with open(os.path.join(project_root, 'cache', 'backtest_results.json'), 'r') as f:
             results = json.load(f)
         
-        with open('../cache/market_data.json', 'r') as f:
+        with open(os.path.join(project_root, 'cache', 'market_data.json'), 'r') as f:
             market_data = json.load(f)
         
         if data_type not in results or symbol not in results[data_type]:
             return jsonify({'error': 'Symbol not found'}), 404
         
         backtest_result = results[data_type][symbol]
-        price_data = market_data[data_type][symbol]
+        price_data = market_data.get(data_type, {}).get(symbol, {})
         
         # Get admin settings from query parameters
         risk_per_trade = float(request.args.get('risk', 100))
         starting_capital = float(request.args.get('capital', 10000))
         
         trades = backtest_result['trades']
-        equity_curve = [starting_capital]
-        total_invested = 0
-        total_return = 0
-        returns = []
+        is_etf = data_type == 'etfs' or backtest_result.get('strategy') == 'buy_hold'
         
-        for trade in trades:
-            pnl = trade['outcome_R'] * risk_per_trade
-            total_return += pnl
-            equity_curve.append(equity_curve[-1] + pnl)
-            total_invested += risk_per_trade
-            returns.append(pnl / equity_curve[-2] if equity_curve[-2] > 0 else 0)
+        if is_etf:
+            # ETF buy-and-hold calculation
+            if trades:
+                total_return = starting_capital * trades[0]['outcome_R']
+                equity_curve = [starting_capital, starting_capital + total_return]
+                returns = [trades[0]['outcome_R']]
+            else:
+                total_return = 0
+                equity_curve = [starting_capital]
+                returns = [0]
+            total_invested = starting_capital
+        else:
+            # Trading strategy calculation
+            equity_curve = [starting_capital]
+            total_invested = 0
+            total_return = 0
+            returns = []
+            
+            for trade in trades:
+                pnl = trade['outcome_R'] * risk_per_trade
+                total_return += pnl
+                equity_curve.append(equity_curve[-1] + pnl)
+                total_invested += risk_per_trade
+                returns.append(pnl / equity_curve[-2] if equity_curve[-2] > 0 else 0)
         
         final_capital = equity_curve[-1] if equity_curve else starting_capital
         roi_percent = ((final_capital - starting_capital) / starting_capital) * 100
@@ -108,14 +240,15 @@ def api_backtest_detail(data_type, symbol):
         
         # Calculate ratios
         import math
-        if len(returns) > 1:
+        if len(returns) > 0 and returns[0] != 0:
             avg_return = sum(returns) / len(returns)
-            return_std = math.sqrt(sum((r - avg_return) ** 2 for r in returns) / (len(returns) - 1))
+            if len(returns) > 1:
+                return_std = math.sqrt(sum((r - avg_return) ** 2 for r in returns) / (len(returns) - 1))
+            else:
+                return_std = 0
             
-            # Sharpe Ratio (assuming 0% risk-free rate)
             sharpe_ratio = avg_return / return_std if return_std > 0 else 0
             
-            # Sortino Ratio (downside deviation)
             negative_returns = [r for r in returns if r < 0]
             if negative_returns:
                 downside_std = math.sqrt(sum(r ** 2 for r in negative_returns) / len(negative_returns))
@@ -123,7 +256,6 @@ def api_backtest_detail(data_type, symbol):
             else:
                 sortino_ratio = 999 if avg_return > 0 else 0
             
-            # Calmar Ratio
             calmar_ratio = (roi_percent / 100) / abs(max_drawdown) if max_drawdown < 0 else 999
         else:
             sharpe_ratio = sortino_ratio = calmar_ratio = 0
@@ -133,7 +265,7 @@ def api_backtest_detail(data_type, symbol):
             'price_data': price_data,
             'investment_metrics': {
                 'starting_capital': starting_capital,
-                'risk_per_trade': risk_per_trade,
+                'risk_per_trade': risk_per_trade if not is_etf else starting_capital,
                 'total_invested': total_invested,
                 'total_return': total_return,
                 'final_capital': final_capital,
@@ -142,7 +274,8 @@ def api_backtest_detail(data_type, symbol):
                 'max_drawdown_percent': max_drawdown * 100,
                 'sharpe_ratio': sharpe_ratio,
                 'sortino_ratio': sortino_ratio,
-                'calmar_ratio': calmar_ratio
+                'calmar_ratio': calmar_ratio,
+                'is_etf': is_etf
             }
         })
     except Exception as e:
@@ -151,7 +284,12 @@ def api_backtest_detail(data_type, symbol):
 @app.route('/api/backtest-results')
 def api_backtest_results():
     try:
-        with open('../cache/backtest_results.json', 'r') as f:
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        cache_path = os.path.join(project_root, 'cache', 'backtest_results.json')
+        
+        with open(cache_path, 'r') as f:
             results = json.load(f)
         return jsonify(results)
     except Exception as e:
@@ -160,7 +298,12 @@ def api_backtest_results():
 @app.route('/api/strategy-results/<strategy_name>')
 def api_strategy_results(strategy_name):
     try:
-        with open(f'../cache/{strategy_name}_results.json', 'r') as f:
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        cache_path = os.path.join(project_root, 'cache', f'{strategy_name}_results.json')
+        
+        with open(cache_path, 'r') as f:
             results = json.load(f)
         return jsonify(results)
     except Exception as e:
@@ -261,7 +404,12 @@ def api_data():
     
     try:
         # Load from JSON cache
-        with open('../cache/market_data.json', 'r') as f:
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        cache_path = os.path.join(project_root, 'cache', 'market_data.json')
+        
+        with open(cache_path, 'r') as f:
             cache_data = json.load(f)
         
         table_name = symbol.replace('/', '_')
@@ -291,4 +439,4 @@ def api_data():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=False, host='0.0.0.0', port=8080)
